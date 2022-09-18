@@ -26,7 +26,8 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint src/**/*.ts",
-    "lint:fix": "npx prettier-eslint src/**/*.ts --write"
+    "lint:fix": "npx prettier-eslint src/**/*.ts --write",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.37.0",
@@ -35,23 +36,17 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.2.5",
     "eslint-plugin-promise": "^6.0.1",
-    "husky": "^8.0.1",
+    "husky": "^8.0.0",
     "lint-staged": "^13.0.3",
     "prettier-eslint": "^15.0.1",
     "prettier-eslint-cli": "^7.1.0",
     "typescript": "^4.8.3",
     "vite": "^3.1.0"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-stage"
-    }
-  },
   "lint-staged": {
-    "*.ts": [
+    "src/*.ts": [
       "npm run lint:fix",
-      "npm run lint",
-      "git add"
+      "npm run lint"
     ]
   }
 }
