@@ -27,10 +27,12 @@
     "preview": "vite preview",
     "lint": "eslint src/**/*.ts",
     "lint:fix": "npx prettier-eslint src/**/*.ts --write",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "commit": "cz"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.37.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.23.1",
     "eslint-config-standard-with-typescript": "^23.0.0",
     "eslint-plugin-import": "^2.26.0",
@@ -48,5 +50,10 @@
       "npm run lint:fix",
       "npm run lint"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
