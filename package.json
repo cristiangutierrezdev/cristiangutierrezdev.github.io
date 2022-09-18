@@ -26,9 +26,12 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint src/**/*.ts",
-    "lint:fix": "npx prettier-eslint src/**/*.ts --write",
+    "lint:fix": "npx prettier-eslint src/**/*.{ts,html} --write",
+    "lint:css": "npx stylelint src/**/*.{css,sass}",
+    "lint:css-fix": "npx stylelint src/**/*.{css,sass} --fix",
     "prepare": "husky install",
-    "commit": "cz"
+    "postinstall": "husky install",
+    "commit": "npx lint-staged && cz"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.37.0",
@@ -42,13 +45,28 @@
     "lint-staged": "^13.0.3",
     "prettier-eslint": "^15.0.1",
     "prettier-eslint-cli": "^7.1.0",
+    "stylelint": "^14.11.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^28.0.0",
+    "stylelint-config-standard-scss": "^5.0.0",
     "typescript": "^4.8.3",
     "vite": "^3.1.0"
   },
   "lint-staged": {
-    "src/*.ts": [
-      "npm run lint:fix",
+    "src/**/*.{ts,js,html}": [
+      "npm run lint:fix"
+    ],
+    "src/**/*.{ts,js}": [
       "npm run lint"
+    ],
+    "src/**/*.{css,sass}": [
+      "npm run lint:css-fix",
+      "npm run lint:css"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
     ]
   },
   "config": {
