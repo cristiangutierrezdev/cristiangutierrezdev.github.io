@@ -30,7 +30,6 @@
     "lint:css": "npx stylelint src/**/*.{css,sass}",
     "lint:css-fix": "npx stylelint src/**/*.{css,sass} --fix",
     "prepare": "husky install",
-    "postinstall": "husky install",
     "commit": "cz"
   },
   "devDependencies": {
