@@ -52,14 +52,10 @@
     "vite": "^3.1.0"
   },
   "lint-staged": {
-    "src/**/*.{ts,js,html}": [
-      "npm run lint:fix"
-    ],
     "src/**/*.{ts,js}": [
       "npm run lint"
     ],
     "src/**/*.{css,sass}": [
-      "npm run lint:css-fix",
       "npm run lint:css"
     ]
   },
