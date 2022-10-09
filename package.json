@@ -26,9 +26,9 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint src/**/*.ts",
-    "lint:fix": "npx prettier-eslint src/**/*.{ts,html} --write",
-    "lint:css": "npx stylelint src/**/*.{css,sass}",
-    "lint:css-fix": "npx stylelint src/**/*.{css,sass} --fix",
+    "lint:fix": "npx prettier-eslint src/**/*.ts --write",
+    "lint:css": "npx stylelint src/**/*.scss",
+    "lint:css-fix": "npx stylelint src/**/*.scss --fix",
     "prepare": "husky install",
     "commit": "cz"
   },
@@ -54,10 +54,10 @@
     "vite": "^3.1.0"
   },
   "lint-staged": {
-    "src/**/*.{ts,js}": [
+    "src/**/*.ts": [
       "npm run lint"
     ],
-    "src/**/*.{css,sass}": [
+    "src/**/*.scss": [
       "npm run lint:css"
     ]
   },
@@ -70,5 +70,8 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "sass": "^1.55.0"
   }
 }
