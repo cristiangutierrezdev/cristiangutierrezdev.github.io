@@ -81,8 +81,8 @@ CLI to sync with vscode extension
 Install
 ````npm  install --save-dev stylelint stylelint-config-standard````
 
-Install for sass
-````npm  install --save-dev stylelint-config-standard-scss stylelint-config-sass-guidelines````
+Install for css
+````npm  install --save-dev stylelint-config-standard-scss````
 
 Add config file
 ````bash
@@ -91,8 +91,6 @@ cat > .stylelintrc.json << EOF
   "extends": [
     "stylelint-config-standard",
     "stylelint-config-prettier",
-    "stylelint-config-standard-scss",
-    "stylelint-config-sass-guidelines"
   ]
 }
 EOF
@@ -105,8 +103,8 @@ Add these scripts in the package.json
 ````json
 "lint": "eslint src/**/*.ts",
 "lint:fix": "npx prettier-eslint src/**/*.{ts,html} --write",
-"lint:css": "npx stylelint src/**/*.{css,sass}",
-"lint:css-fix": "npx stylelint src/**/*.{css,sass} --fix"
+"lint:css": "npx stylelint src/**/*.{css}",
+"lint:css-fix": "npx stylelint src/**/*.{css} --fix"
 ````
 
 ### Setup lint-staged hook
@@ -120,7 +118,7 @@ Add this to the ``package.json``
     "src/**/*.{ts,js}": [
       "npm run lint"
     ],
-    "src/**/*.{css,sass}": [
+    "src/**/*.{css}": [
       "npm run lint:css"
     ]
   }

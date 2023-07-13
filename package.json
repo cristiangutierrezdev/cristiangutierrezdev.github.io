@@ -27,8 +27,8 @@
     "preview": "vite preview",
     "lint": "eslint src/**/*.ts",
     "lint:fix": "npx prettier-eslint src/**/*.ts --write",
-    "lint:css": "npx stylelint src/**/*.scss",
-    "lint:css-fix": "npx stylelint src/**/*.scss --fix",
+    "lint:css": "npx stylelint src/**/*.css",
+    "lint:css-fix": "npx stylelint src/**/*.css --fix",
     "prepare": "husky install",
     "commit": "cz"
   },
@@ -44,13 +44,10 @@
     "lint-staged": "^13.0.3",
     "prettier-eslint": "^15.0.1",
     "prettier-eslint-cli": "^7.1.0",
-    "sass": "^1.63.6",
     "stylelint": "^14.13.0",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-recommended": "^9.0.0",
-    "stylelint-config-sass-guidelines": "^9.0.1",
     "stylelint-config-standard": "^28.0.0",
-    "stylelint-config-standard-scss": "^5.0.0",
     "typescript": "^4.8.3",
     "vite": "^3.1.0"
   },
@@ -58,7 +55,7 @@
     "src/**/*.ts": [
       "npm run lint"
     ],
-    "src/**/*.scss": [
+    "src/**/*.css": [
       "npm run lint:css"
     ]
   },

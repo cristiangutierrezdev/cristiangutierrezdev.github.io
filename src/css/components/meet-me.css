@@ -1,8 +1,17 @@
 .meet-me {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 200vh;
+  justify-content: start;
   margin: 0 auto 50px;
-  max-width: 575px;
+  padding-top: 20%;
   position: relative;
-  transform: translateY(-10px);
+  scroll-snap-align: start;
+
+  .meet-me__wrapper {
+    max-width: 575px;
+  }
 
   .meet-me__title {
     font-size: 32px;
@@ -16,6 +25,7 @@
   }
 
   .meet-me__description {
+    background-color: var(--white-color);
     font-size: 18px;
     line-height: 24px;
   }

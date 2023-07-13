@@ -1,0 +1,118 @@
+.presentation {
+  height: 200vh;
+  scroll-snap-align: start;
+
+  .presentation__wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+  }
+
+  .presentation__bubble {
+    background-color: var(--primary-color);
+    border-radius: 18px 18px 0;
+    color: var(--white-color);
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    max-width: 100px;
+    padding: 10px 16px;
+    text-align: left;
+    transform: translate(-50px, 5px);
+  }
+
+  .presentation__thumbnail {
+    background-image: url('/img/cristian_gutierrez_dev.jpg');
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 225px;
+    overflow: hidden;
+    width: 225px;
+  }
+
+  .presentation__badge {
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+    margin-top: 25px;
+
+    .presentation__i-am {
+      color: var(--text-gray);
+      font-size: 1rem;
+
+      @media (min-width: 768px) {
+        font-size: 1.125rem;
+      }
+    }
+
+    .presentation__name {
+      color: var(--text-gray);
+      font-size: 3rem;
+      font-weight: 700;
+      text-align: center;
+
+      @media (min-width: 768px) {
+        font-size: 4rem;
+      }
+    }
+
+    .presentation__last-name {
+      color: var(--primary-color);
+    }
+
+    .presentation__position-wrapper {
+      position: relative;
+    }
+
+    .presentation__title {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+      font-size: 0.875rem;
+
+      @media (min-width: 400px) {
+        font-size: 1rem;
+      }
+
+      @media (min-width: 768px) {
+        font-size: 1.125rem;
+      }
+    }
+
+    .presentation__position {
+      /* presentation__temp-line marginX + width */
+      margin-right: 20px;
+
+      @media (min-width: 400px) {
+        margin-right: 26px;
+      }
+
+      @media (min-width: 768px) {
+        margin-right: 42px;
+      }
+    }
+
+    .presentation__temp-line {
+      background-color: var(--gray-light);
+      height: 200vh;
+      margin: 5px 9px 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 2px;
+
+      @media (min-width: 400px) {
+        margin-left: 12px;
+        margin-right: 12px;
+      }
+
+      @media (min-width: 768px) {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+    }
+  }
+}
