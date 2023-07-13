@@ -2,14 +2,6 @@
   height: 200vh;
   scroll-snap-align: start;
 
-  .presentation__wrapper {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: center;
-  }
-
   .presentation__bubble {
     background-color: var(--primary-color);
     border-radius: 18px 18px 0;

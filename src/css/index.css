@@ -1,5 +1,6 @@
 @import "./reset.css";
 @import "./global.css";
+@import "./common.css";
 
 /* Components */
 @import "./components/index.css";
