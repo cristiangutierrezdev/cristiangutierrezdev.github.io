@@ -97,7 +97,7 @@
 
     .presentation__temp-line {
       background-color: var(--gray-light);
-      height: 200vh;
+      height: 180vh;
       margin: 5px 9px 0;
       position: absolute;
       right: 0;
