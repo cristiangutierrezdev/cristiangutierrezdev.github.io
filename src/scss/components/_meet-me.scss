@@ -1,0 +1,32 @@
+.meet-me {
+  margin: 0 auto 50px;
+  max-width: 575px;
+  position: relative;
+  transform: translateY(-10px);
+
+  .meet-me__title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+
+    .meet-me__title-highlighted {
+      color: var(--primary-color);
+    }
+  }
+
+  .meet-me__description {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .meet-me__temp-line {
+    background-color: var(--gray-light);
+    height: 100vh;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: translateX(-65px);
+    width: 2px;
+  }
+}

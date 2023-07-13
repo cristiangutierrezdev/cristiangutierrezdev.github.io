@@ -147,6 +147,15 @@ echo 'please be patient, this may take a while...'
 
 npx lint-staged
 ```
+You can also configure the .git folder with:
+
+##### Traditional git hooks
+
+Update  `.git/hooks/prepare-commit-msg`  with the following code:
+```bash
+#!/bin/bash
+exec < /dev/tty && node_modules/.bin/cz --hook || true
+```
 
 ### Setup Commitizen
 Install
